@@ -53,9 +53,9 @@ class TakeOverSelectiveMux(InputMux):
         else:
             parameters = ("roll", "pitch")
         self._devs.append((dev, parameters))
-        #logger.info("First has mapping {}".format(self._devs[0][0].input_map["Input.AXIS-3"]["key"]))
-        #if len(self._devs) > 1:
-        #    logger.info("Second has mapping {}".format(self._devs[1][0].input_map["Input.AXIS-3"]["key"]))
+        logger.info("First has mapping {}".format(self._devs[0][0].input_map["Input.AXIS-3"]["key"]))
+        if len(self._devs) > 1:
+            logger.info("Second has mapping {}".format(self._devs[1][0].input_map["Input.AXIS-3"]["key"]))
 
     def get_supported_dev_count(self):
         return 2

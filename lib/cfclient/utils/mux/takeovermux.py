@@ -81,6 +81,10 @@ class TakeOverMux(InputMux):
                 data = dm
             else:
                 data = ds
+                #added: override rol/pitch/yaw with master
+                data["roll"] = dm["roll"]
+                data["pitch"] = dm["pitch"]
+                data["yaw"] = dm["yaw"]
 
             # Now res contains the mix of the two
             [roll, pitch] = self._scale_rp(data["roll"], data["pitch"])
